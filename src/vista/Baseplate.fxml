@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1186.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BaseplateController">
+   <children>
+      <Pane fx:id="playersCountPane" prefHeight="784.0" prefWidth="1195.0">
+         <children>
+            <ImageView fitHeight="777.0" fitWidth="1195.0" layoutX="-5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/strretBackground.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#909090" height="375.0" layoutX="338.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="535.0" />
+            <Label alignment="CENTER" layoutX="359.0" layoutY="98.0" text="How many players the game will have?">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceBox_playersCount" layoutX="554.0" layoutY="168.0" prefHeight="25.0" prefWidth="103.0" />
+            <Button fx:id="playersConfirmation_button" layoutX="500.0" layoutY="311.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="211.0" text="PLAY">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="playersCustomPane" layoutX="7.0" prefHeight="784.0" prefWidth="1186.0" visible="false">
+         <children>
+            <ImageView fitHeight="777.0" fitWidth="1195.0" layoutX="-14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/strretBackground.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="406.0" fitWidth="382.0" layoutX="-59.0" layoutY="332.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/npcIdle.gif" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="100.0" arcWidth="100.0" height="117.0" layoutX="206.0" layoutY="286.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="958.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.03791469194312791" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5657894611358643" green="0.555311918258667" blue="0.555311918258667" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#720101" height="39.0" layoutX="358.0" layoutY="310.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="121.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle arcHeight="100.0" arcWidth="100.0" height="123.0" layoutX="217.0" layoutY="462.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="918.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.03791469194312791" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5263158082962036" green="0.514132559299469" blue="0.514132559299469" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label fx:id="conversation_label" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="243.0" prefHeight="198.0" prefWidth="900.0" text="Good night, visitor one, I need your name to see if you are on the whitelist, or perhaps the blacklist..." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="check_button" layoutX="978.0" layoutY="492.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="139.0" text="CHECK-IN">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textfield_name" layoutX="242.0" layoutY="492.0" prefHeight="53.0" prefWidth="719.0" promptText="Write your name here...">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane fx:id="gameplayPane" prefHeight="784.0" prefWidth="1195.0" visible="false">
+         <children>
+            <ImageView fitHeight="777.0" fitWidth="1186.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/darkRoom.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b5b5b5" height="484.0" layoutX="447.0" layoutY="203.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="293.0" />
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b5b5b5" height="162.0" layoutX="775.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="211.0" />
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b5b5b5" height="353.0" layoutX="200.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="211.0" />
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b5b5b5" height="106.0" layoutX="210.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="189.0" />
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b5b5b5" height="96.0" layoutX="211.0" layoutY="415.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="189.0" />
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b5b5b5" height="106.0" layoutX="212.0" layoutY="522.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="189.0" />
+            <Label alignment="CENTER" layoutX="454.0" layoutY="223.0" prefHeight="25.0" prefWidth="272.0" text="CURRENT PLAYER PLAYING" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="shootButton" layoutX="471.0" layoutY="559.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="114.0" style="-fx-background-radius: 15;" text="SHOOT">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="spinShootButton" layoutX="600.0" layoutY="559.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="114.0" style="-fx-background-radius: 15;" text="SPIN AND SHOOT" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Label fx:id="playerName_label" alignment="CENTER" layoutX="479.0" layoutY="259.0" prefHeight="68.0" prefWidth="221.0" text="playerName" textAlignment="CENTER" textFill="#da1313" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="791.0" layoutY="299.0" prefHeight="68.0" prefWidth="180.0" text="NEXT PLAYER TURN" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="nextPlayerName_label" alignment="CENTER" layoutX="794.0" layoutY="358.0" prefHeight="68.0" prefWidth="173.0" text="playerName" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="223.0" layoutY="313.0" prefHeight="28.0" prefWidth="166.0" text="BULLETS SHOT" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="223.0" layoutY="426.0" prefHeight="28.0" prefWidth="166.0" text="DEAD PEOPLE" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="bulletsShot_label" alignment="CENTER" layoutX="223.0" layoutY="333.0" prefHeight="68.0" prefWidth="166.0" text="0" textAlignment="CENTER" textFill="#d68400">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label fx:id="deadPeople_label" alignment="CENTER" layoutX="223.0" layoutY="445.0" prefHeight="68.0" prefWidth="166.0" text="0" textAlignment="CENTER" textFill="#d68400">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="223.0" layoutY="536.0" prefHeight="28.0" prefWidth="166.0" text="TIMES SPINNED" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="timesSpinned_label" alignment="CENTER" layoutX="223.0" layoutY="559.0" prefHeight="68.0" prefWidth="166.0" text="0" textAlignment="CENTER" textFill="#d68400">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <Button fx:id="peekTambor" layoutX="787.0" layoutY="222.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="189.0" style="-fx-background-radius: 15;" text="PEEK BULLETS" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Pane fx:id="tamborPane" layoutX="765.0" layoutY="457.0" prefHeight="237.0" prefWidth="231.0" visible="false">
+               <children>
+                  <Circle fill="#c2c2c3" layoutX="114.0" layoutY="114.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fill="#c2c2c3" layoutX="164.0" layoutY="139.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fill="#c2c2c3" layoutX="164.0" layoutY="80.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fill="#c2c2c3" layoutX="64.0" layoutY="139.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fill="#c2c2c3" layoutX="64.0" layoutY="80.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fill="#c2c2c3" layoutX="114.0" layoutY="174.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fill="#c2c2c3" layoutX="114.0" layoutY="55.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Circle fx:id="position1" fill="#ab8000" layoutX="114.0" layoutY="55.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+                  <Circle fx:id="position4" fill="#ab8000" layoutX="114.0" layoutY="174.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+                  <Circle fx:id="position5" fill="#ab8000" layoutX="164.0" layoutY="139.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+                  <Circle fx:id="position6" fill="#ab8000" layoutX="164.0" layoutY="80.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+                  <Circle fx:id="position3" fill="#ab8000" layoutX="64.0" layoutY="139.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+                  <Circle fx:id="position2" fill="#ab8000" layoutX="64.0" layoutY="80.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="informationPane" layoutX="100.0" layoutY="169.0" prefHeight="500.0" prefWidth="983.0" visible="false">
+         <children>
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#707375" height="367.0" layoutX="26.0" layoutY="11.0" stroke="BLACK" strokeDashOffset="10.0" strokeType="INSIDE" strokeWidth="5.0" width="820.0" />
+            <Label fx:id="informationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="34.0" prefHeight="111.0" prefWidth="708.0" text="DUDE HAS DIED" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="56.0" />
+               </font>
+            </Label>
+            <Button fx:id="continueButton" layoutX="313.0" layoutY="218.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="272.0" text="CONTINUE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
