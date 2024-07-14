@@ -9,4 +9,5 @@ It's a basic game that since I was a teenager always thought it would be fun to 
 
 > [!IMPORTANT]  
 > In case you want to make the project work, remember to add the "sdk".
+> 
 > After ending a match data won't reset itself and may be buggy (having data from past game, relaunch it ig).
